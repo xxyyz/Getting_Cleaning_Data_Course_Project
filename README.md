@@ -34,7 +34,7 @@ filters for the _measurements_ on the mean and standard deviation for each measu
 As the original feature names are descriptive enough, this function simply greps for mean and std
 in the feature names and adds some more processing (to filter out those columns that are not _measurements_, but results of calculations).
 
-read.table utilizes colClasses to read in only the really needed data, so using as minimal memory as possible. (~10% of the amount needed to read all, unfiltered data into memory.)
+read.table utilizes colClasses to read in only the really needed data (see "NULL" to skip not needed columns), so using as minimal memory as possible. (~10% of the amount needed to read all, unfiltered data into memory.)
 
 col.names is also prepared properly and used in read.table, so point 4 of the task description is fulfilled.
 
