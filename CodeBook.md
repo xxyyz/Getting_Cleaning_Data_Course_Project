@@ -4,7 +4,7 @@
 
 Here follows a concise description of the data in the output file ("datatable_point_5.txt", see below).
 
-It contains 181 rows, the first being a header, so we have 180 "observations".
+That data file contains 181 rows, the first being a header, so we have 180 "observations".
 It contains 42 columns, the first 2 being ID columns, showing the groupings. Thus we have 40 "variables".
 
 ## 1st column ("subject")
