@@ -14,7 +14,7 @@ These are the same IDs as the ones in the source files "test/subject_test.txt" a
 
 ## 2nd column ("activity")
 
-It contains the names ("labels") of activities done by the people.
+It contains the names ("labels") of activities done by the people during the experiment.
 They come from the original source files "test/y_test.txt" and "train/y_train.txt"
 combined with the file "activity_labels.txt".
 
