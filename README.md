@@ -17,6 +17,7 @@ Files and their contents are determined by the project's task description.
 There is only 1 script "run_analysis.R", containing 2 functions, doing all the work for this assignment.
 
 Details are in the script itself as comments. Here follows a higher level overview.
+
 (Note: consult "CodeBook.md" to read about the output data created by "run_analysis.R".
 "CodeBook.md" also explains how to get the source data and how to run "run_analysis.R"...)
 
@@ -28,9 +29,13 @@ The 1st function ("read_mean_std") simply reads the needed source data, assuming
 (as they should be, according to the course project assignment).
 
 More specifically: it combines the train and test data using rbind (see point 1 of the task description) and
-filters for the _measurements_ on the mean and standard deviation for each measurement (see point 2 of the task description). As the original feature names are descriptive enough, this function simply greps for mean and std
+filters for the _measurements_ on the mean and standard deviation for each measurement (see point 2 of the task description).
+
+As the original feature names are descriptive enough, this function simply greps for mean and std
 in the feature names and adds some more processing (to filter out those columns that are not _measurements_, but results of calculations).
+
 read.table utilizes colClasses to read in only the really needed data, so using as minimal memory as possible. (~10% of the amount needed to read all, unfiltered data into memory.)
+
 col.names is also prepared properly and used in read.table, so point 4 of the task description is fulfilled.
 
 ## add_subject_activity()
@@ -40,4 +45,5 @@ The 2nd function ("add_subject_activity") takes the output of the first ("read_m
 ## the main program
 
 This just calls the 2 functions (above) and then use data.table to calculate the group means (see point 5 of the task description).
+
 Finally it exports the result to a .txt file as it has to be uploaded for the peer review part.
